@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css">
+<section id="jasa-travel">
+  <h2>Jasa Travel</h2>
+  <div class="travel-cards">
+    <div class="travel-item">
+      <h3>Paket Hemat</h3>
+      <p>Termasuk transportasi, penginapan 1 malam, dan tour guide</p>
+      <span>Harga per orang: Rp 500.000</span>
+      <input id="hematJumlah" type="number" min="1" max="10" placeholder="Jumlah orang">
+      <button onclick="pesanTravel('Hemat', 500000, document.getElementById('hematJumlah').value)">Pesan</button>
+    </div>
+
+    <div class="travel-item">
+      <h3>Paket Lengkap</h3>
+      <p>Termasuk transportasi, penginapan 2 malam, makanan, dan tour guide</p>
+      <span>Harga per orang: Rp 1.000.000</span>
+      <input id="lengkapJumlah" type="number" min="1" max="10" placeholder="Jumlah orang">
+      <button onclick="pesanTravel('Lengkap', 1000000, document.getElementById('lengkapJumlah').value)">Pesan</button>
+    </div>
+
+    <div class="travel-item">
+      <h3>Paket Honeymoon</h3>
+      <p>Termasuk transportasi, hotel bintang 4, dinner romantis, dan tour private</p>
+      <span>Harga per orang: Rp 2.000.000</span>
+      <input id="honeymoonJumlah" type="number" min="1" max="10" placeholder="Jumlah orang">
+      <button onclick="pesanTravel('Honeymoon', 2000000, document.getElementById('honeymoonJumlah').value)">Pesan</button>
+    </div>
+  </div>
+</section>
+
+<script>
+  function pesanTravel(namaPaket, harga, jumlah) {
+    if (!jumlah || jumlah <= 0) {
+      alert('Silakan masukkan jumlah orang terlebih dahulu');
+      return;
+    }
+    const total = harga * jumlah;
+    const pesan = `Saya ingin memesan Paket ${namaPaket}\nJumlah orang: ${jumlah}\nHarga per orang: Rp ${harga.toLocaleString()}\nTotal: Rp ${total.toLocaleString()}`;
+
+    const nomorWa = "6282269165383";
+    const url = `https://wa.me/${nomorWa}?text=${encodeURIComponent(pesan)}`;
+
+    window.location.href = url;
+  }
+</script>
+
+

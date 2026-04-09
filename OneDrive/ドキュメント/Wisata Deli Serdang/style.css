@@ -1,0 +1,339 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('https://2.bp.blogspot.com/-r8TviXkrDt0/VHRmEttBDyI/AAAAAAAAAGI/KD5nXrFtzJc/s1600/Cool-Wallpaper.jpg'); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  background: linear-gradient(90deg, #18a777, #a39f9c);
+  padding: 20px;
+  color: #ffffff;
+  box-shadow: 0 10px 20px -5px #0005;
+  position: relative;
+}
+
+header h1 {
+  margin-bottom: 10px;
+  font-size: 1.8em;
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: #f8f8f8;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  background: #ffffff;
+  color: #ff7e5f;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 10px -5px #ff7e5f;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: linear-gradient(90deg, #ff7e5f, #feb47b);
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 20px;
+  }
+  
+  nav ul.open {
+    display: flex;
+  }
+  
+  .hamburger {
+    display: block;
+  }
+}
+
+section {
+  padding: 30px 20px;
+}
+
+section h2 {
+  color: #fcf9f9;
+  margin-bottom: 20px;
+  font-size: 1.6em;
+  text-align: center;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+  gap: 30px;
+  padding: 20px;
+}
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: block;
+}
+
+.card {
+  background: #fdfdfd;
+  padding: 30px 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px -5px #0005;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px -10px #ff7e5f;
+}
+
+.card .icon {
+  color: #ff7e5f;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .icon {
+  transform: scale(1.2);
+}
+
+.card h3 {
+  margin-bottom: 15px;
+  font-size: 1.4em;
+  color: #110c0c;
+}
+
+.card p {
+  color: #130d0d;
+  margin-bottom: 20px;
+}
+
+.card button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: linear-gradient(90deg, #ff7e5f, #feb47b);
+  color: #ffffff;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 5px 10px -5px #ff7e5f;
+}
+
+.card button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px -5px #ff7e5f;
+  background: linear-gradient(90deg, #feb47b, #ff7e5f);
+}
+
+
+.contact {
+  padding: 50px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.contact h2 {
+  color: #ff7e5f;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 2em;
+}
+
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.contact-info .info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 1.1em;
+}
+
+.contact-info .info-item span {
+  font-size: 1.5em;
+  margin-right: 15px;
+  color: #ff7e5f;
+}
+
+.contact-form {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px -5px #0005;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin-bottom: 20px;
+  padding: 15px;
+  font-size: 1em;
+  border: 1px solid #ff7e5f;
+  border-radius: 10px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #ff9e79;
+  box-shadow: 0 0 10px #ff9e79;
+}
+
+.contact-form button {
+  padding: 15px;
+  background: linear-gradient(90deg, #ff7e5f, #feb47b);
+  color: #ffffff;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 5px 10px -5px #ff7e5f;
+}
+
+.contact-form button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px -10px #ff7e5f;
+  background: linear-gradient(90deg, #feb47b, #ff7e5f);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #fff;
+  background: #ff7e5f;
+}
+
+#jasa-travel {
+  padding: 40px 20px;
+  background: lch(60.52% 35.78 257.47);
+}
+
+#jasa-travel h2 {
+  color: #fffefe;
+  margin-bottom: 30px;
+  font-size: 2em;
+  text-align: center;
+  position: relative;
+}
+
+#jasa-travel h2::after {
+  content:'';
+  width: 100px;
+  height: 4px;
+  background: #ff7e5f;
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.travel-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+  gap: 30px;
+}
+
+.travel-item {
+  background: #ffffff;
+  padding: 30px 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px -5px #0005;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.travel-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px -10px #ff7e5f;
+}
+
+.travel-item h3 {
+  color: #ff7e5f;
+  margin-bottom: 15px;
+  font-size: 1.5em;
+}
+
+.travel-item p {
+  color: #666;
+  margin-bottom: 20px;
+  font-size: 1.1em;
+}
+
+.travel-item span {
+  color: #ff7e5f;
+  font-weight: bold;
+  margin-bottom: 20px;
+  display: block;
+  font-size: 1.2em;
+}
+
+.travel-item input {
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 80%;
+  border: 1px solid #ff7e5f;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.travel-item input:focus {
+  outline: none;
+  box-shadow: 0 0 10px #ff9e79;
+}
+
+.travel-item button {
+  padding: 10px 20px;
+  background: linear-gradient(90deg, #ff7e5f, #feb47b);
+  color: #ffffff;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 5px 10px -5px #ff7e5f;
+}
+
+.travel-item button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px -5px #ff7e5f;
+  background: linear-gradient(90deg, #feb47b, #ff7e5f);
+}
